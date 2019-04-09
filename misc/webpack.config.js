@@ -13,7 +13,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.css', 'scss']
+    extensions: ['', '.js', '.css']
   },
 
   module: {
@@ -45,3 +45,5 @@ module.exports = {
   ]
 
 }
+
+import 'JQuery';
