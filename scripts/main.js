@@ -2,12 +2,14 @@ import 'jquery'
 import 'bootstrap'
 
 // data from alphavantage API, convert from JSON and assign to da
-fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (response) {
-        return response.json();
+var stock_prices = document.getElementById('stock-prices');
+var stock_prices.onclick = function () {
+    fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (t) {
+        console.log('data', data);
+        return data
     })
-    .then(function (myJson) {
-        console.log(JSON.stringify(myJson));
-    });
+    return stock_prices;
+}
 
 
 // var stock_prices = document.getElementById('stock-prices');
@@ -15,9 +17,7 @@ fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=
 // stock_prices.onclick = function () {
 
 //         fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
-//             .then(function (response) {
-//                 return response.json(); // transform the data
-//             })
+//             
 //             .then(function (t) {
 //                console.log('data', data);   // log the data
 //                     return data;
@@ -65,5 +65,5 @@ fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=
 //         }
 //     }
 // 
-});
-}
+
+
