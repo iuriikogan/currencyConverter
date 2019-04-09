@@ -1,5 +1,7 @@
 console.log('this works');
 
+var stockData = {};
+
 var stock_prices_btn = document.getElementById('stock-prices-btn');
 var stock_prices = document.getElementById('stock-prices');
 stock_prices_btn.onclick = function (_t) {
@@ -11,9 +13,9 @@ stock_prices_btn.onclick = function (_t) {
 		.then(function(data) {
 			console.log('stock-prices', stock_prices);
 
-			var stock_prices = document.createElement('tbody');
+			stock_prices = document.createElement('tbody');
 
-			stock_prices.forEach(function(data) {
+			stockData.forEach(function(stock_prices) {
 
 				let data_tr = document.createElement('tr'); // cteates <tr></tr>
 
