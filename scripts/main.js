@@ -1,8 +1,5 @@
 console.alert('this works');
 
-import 'jquery'
-import 'bootstrap'
-
 // data from alphavantage API, convert from JSON and assign to da
 var stockData = {};
 
