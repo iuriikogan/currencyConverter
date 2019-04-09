@@ -1,26 +1,25 @@
 console.alert('this works');
+console.log(stock_prices);
 
 // data from alphavantage API, convert from JSON and assign to da
-var stockData = {};
-
-$(document).on('click', function () {
-    fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (_t) {
-        console.log('stockData', stockData);
-        return stockData
-    })
-    return stockData;
-})
 
 
-// var stock_prices = document.getElementById('stock-prices');
-// var stockPriceTable = document.getElementById('stock-prices');
-// stock_prices.onclick = function () {
+// $(document).on('click', function (_t) {
+//     fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (_t) {
+//         console.log('stockData', stockData);
+//         return stockData
+//     })
+//     return stockData;
+// })
 
-//         fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
-//             
-//             .then(function (t) {
-//                console.log('data', data);   // log the data
-//                     return data;
+const stock_prices = document.getElementById('stock-prices');
+stock_prices.onclick = () => {
+    fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
+        .then(_t => {
+            console.log('data', data); // log the data
+            return data;
+        })
+};
 
 //             //     var data_body = document.createElement('tbody');
 
@@ -64,4 +63,4 @@ $(document).on('click', function () {
 //             ]
 //         }
 //     }
-// 
+//
