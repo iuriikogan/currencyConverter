@@ -2,7 +2,7 @@ var stock_prices_btn = function newFunction () {
 	return document.getElementById('.stock-prices-btn');
 }
 
-
+test
 var stockDataRequest = new XMLHttpRequest();
 stockDataRequest.open('GET', 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0');
 stockDataRequest.onload = function () {
