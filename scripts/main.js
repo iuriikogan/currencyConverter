@@ -1,14 +1,14 @@
-import 'jquery'
-import 'bootstrap'
+// import 'jquery'
+// import 'bootstrap'
 
 // data from alphavantage API, convert from JSON and assign to da
-var stock_prices = document.getElementById('stock-prices');
-var stock_prices.onclick = function () {
-    fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (t) {
-        console.log('data', data);
-        return data
+var stockData = {};
+stockData.onclick = function () {
+    fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (_t) {
+        console.log('stockData', stockData);
+        return stockData
     })
-    return stock_prices;
+    return stockData;
 }
 
 
