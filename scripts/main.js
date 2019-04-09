@@ -2,7 +2,7 @@ console.log('this works');
 
 var stock_prices_btn = document.getElementById('stock-prices-btn');
 var stock_prices = document.getElementById('stock-prices');
-stock_prices_btn.onclick = function (t) {
+stock_prices_btn.onclick = function (_t) {
 
 	fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0') // get the data
 		.then( function(response) {
