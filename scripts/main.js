@@ -1,18 +1,26 @@
 import 'jquery'
 import 'bootstrap'
 
-                        // data from alphavantage API, convert from JSON and assign to data
+// data from alphavantage API, convert from JSON and assign to da
+fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (response) {
+        return response.json();
+    })
+    .then(function (myJson) {
+        console.log(JSON.stringify(myJson));
+    });
 
-var stock_prices = document.getElementById('stock-prices');
+
+// var stock_prices = document.getElementById('stock-prices');
 // var stockPriceTable = document.getElementById('stock-prices');
-// stock_prices.onload = function () {
+// stock_prices.onclick = function () {
 
-        fetch(url = "https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
-            .then(function (response) {
-                return response.json(); // transform the data
-            })
-            .then(function (t) {
-                console.log('data', data); // log the data
+//         fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
+//             .then(function (response) {
+//                 return response.json(); // transform the data
+//             })
+//             .then(function (t) {
+//                console.log('data', data);   // log the data
+//                     return data;
 
 //             //     var data_body = document.createElement('tbody');
 
@@ -56,5 +64,6 @@ var stock_prices = document.getElementById('stock-prices');
 //             ]
 //         }
 //     }
-// });
-
+// 
+});
+}
