@@ -11,43 +11,40 @@
 </head>
 
 <body>
-		div <container-fluid>
-				<div class="row">
-						<div class="col">
-								<img src="/assets/images/Bandu-logo.jpg" alt="Bandu logo">
-						</div>	
-						<div class="col-2">
-								<img src="/assets/images/header.jpg" alt="header image">
-						</div>	
-						<div class="col-9">
-								<button class="btn success btn-outline-dark" type="submit" action="_T();">Sign up for our Newsletter!!</button>
-						</div>	
-				</div>
-				
-	<!-- <div class="class container-fluid">
-		<div class="class container">
-			<table class="stock-prices">
-			</table>
+		<div class="col-1">
+				<img class="img-fluid" id="bandu-logo" src="/assets/images/Bandu-logo.jpg" alt="Bandu logo">
+			</div>
+
+		<div class="containter">
+			<form>
+				 <input> EUR => USD Selector</input> 		<!--just for reference -->
+			</form> 
+		</div>		
+
+	<div class="container-fluid">
+		<div class="container">
+			<button id="stock_prices_btn">Convert</button>
 		</div>
 	</div>
-	<!--  -->
+
+
 	<div class="class container-fluid">
 		<div class="class container">
 			<table class="stock-prices">
-				<tbody id="stock-prices-tbody">TBODY</tbody>
+				<tbody id="stock-prices-tbody"></tbody>
 			</table>
 		</div>
-	</div> -->
+	</div>
 
 	<div class="class container-fluid">
 		<chart>
 		</chart>
 	</div>
 
-	
+
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-	<script src="/scripts/main.js"> </script>
+	<script src="/scripts/main.js"></script>
 </body>
 
 </html>

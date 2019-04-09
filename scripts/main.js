@@ -1,55 +1,34 @@
 console.log('this works');
 
+var stock_prices_btn = document.getElementById('load-data-btn');
+var external_data_table = document.getElementById('external-data-table');
+stock_prices_btn.onclick = function (t) {
 
-const stock_prices = document.getElementById('stock-prices');
-stock_prices.onloadedmetadata = () => {
-    fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
-        .then(_t => {
-            console.log('data', data); // log the data
-            return data;
-        })
-};
+	fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0') // get the data
+		.then( function(response) {
+			return response.json(); // transform the data
+		})
+		.then(function(data) {
+			console.log('stockData_body', stockData_body );
 
-//             //     var data_body = document.createElement('tbody');
+			var stockData_body = document.createElement('tbody');
 
-//             //     data.forEach(function (data) {
+			stockData.forEach(function(todo) {
 
-//             //         let data_tr = document.createElement('tr'); // cteates <tr></tr>
+				let todo_tr = document.createElement('tr'); // cteates <tr></tr>
 
-//             //         for (value in data) {
-//             //             let data_td = document.createElement('td'); // creates <td></td>
-//             //             let text = document.createTextNode(data[value]); // creates text for the object value
-//             //             data_td.appendChild(text); // adds the text to the <td>
-//             //             data_tr.appendChild(data_td); // adds the <td> to the <tr>
-//             //         }
+				for (value in todo) {
+					let todo_td = document.createElement('td'); // creates <td></td>
+					let text = document.createTextNode(todo[value]); // creates text for the object value
+					todo_td.appendChild(text); // adds the text to the <td>
+					todo_tr.appendChild(todo_td); // adds the <td> to the <tr>
+				}
 
-//             //         data_body.appendChild(data_tr); // adds <tr> to <tbody>
+				stockData_body.appendChild(todo_tr); // adds <tr> to <tbody>
 
-//             //     });
+			});
 
-//             //     external_data_table.appendChild(data_body); // pushes <tbody> to the DOM inside table
+			external_data_table.appendChild(todos_body); // pushes <tbody> to the DOM inside table
 
-//             // });
-
-// }
-
-// var stackedLine = new Chart(ctx, {  //create chart
-//     type: 'line',
-//     data: data,
-//     options: {
-//         scales: {
-//             yAxes: [{
-//                 stacked: true
-//             }]
-//         } {
-//             color: [
-
-//                 'red',
-//                 'blue',
-//                 'green',
-//                 'black',
-//                 'cyan',
-//             ]
-//         }
-//     }
-//
+        });
+    };
