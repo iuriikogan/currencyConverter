@@ -1,15 +1,5 @@
 console.log('this works');
 
-// data from alphavantage API, convert from JSON and assign to da
-
-
-// $(document).on('click', function (_t) {
-//     fetch('https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0').then(function (_t) {
-//         console.log('stockData', stockData);
-//         return stockData
-//     })
-//     return stockData;
-// })
 
 const stock_prices = document.getElementById('stock-prices');
 stock_prices.onloadedmetadata = () => {
