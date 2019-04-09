@@ -1,5 +1,4 @@
-console.alert('this works');
-console.log(stock_prices);
+console.log('this works');
 
 // data from alphavantage API, convert from JSON and assign to da
 
@@ -13,7 +12,7 @@ console.log(stock_prices);
 // })
 
 const stock_prices = document.getElementById('stock-prices');
-stock_prices.onclick = () => {
+stock_prices.onloadedmetadata = () => {
     fetch("https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0") // get the data
         .then(_t => {
             console.log('data', data); // log the data
