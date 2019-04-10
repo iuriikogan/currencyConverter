@@ -17,3 +17,6 @@ body{
 .submit-button{
     text-align: center !important;
 }
+.convert-form {
+    border: 1px solid black;
+}

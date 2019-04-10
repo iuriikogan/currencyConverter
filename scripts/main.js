@@ -8,6 +8,7 @@ var testVar = {
 }
 
 var currency_prices;
+var currency_prices_btn = document.getElementById('.currency-prices-btn'    );
 
 var curData = new XMLHttpRequest();
 curData.open('GET', 'http://data.fixer.io/api/latest?access_key=a754c07aba547f864f841764e00a058c');
@@ -23,7 +24,7 @@ function DoSomething() {
     console.log('RUB: ' + this.currency_prices.rates['RUB']);
 }
 
-/*
+
 currency_prices_btn.onclick = function () {
 
     currency_prices = document.createElement('tbody');
@@ -46,4 +47,3 @@ currency_prices_btn.onclick = function () {
     currency_prices.appendChild(data_body); // pushes <tbody> to the DOM inside table
 
 };
-*/
