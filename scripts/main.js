@@ -4,7 +4,7 @@
 
 var testVar = {
     eur: 1,
-    usd: 1.3s
+    usd: 1.3
 }
 
 var currency_prices;
@@ -25,6 +25,14 @@ function convertRates() {
 }
 
 
+var currency_prices = document.createElement("select");
+for (var value in currency_prices.rates) {
+  var result = (currency_prices.base.value / currency_prices.rates[value]);
+  _select.options[_select.options.length] = new Option(currency_prices.value);
+}
+
+document.body.appendChild(select); 
+ 
 currency_prices_btn.onclick = function () {
 
     currency_prices = document.createElement('tbody');
