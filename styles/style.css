@@ -1,7 +1,19 @@
+body{
+    background-color:lightcyan !important;
+}
+
 .bandu-logo {
     position: absolute;
     text-align: center  !important;
-    padding: 10px;
-    width: 100% !important;
-    height: 360px;
+    margin-top: 10px !important;
+    width:75% !important;
+    height: 180px !important;
+}
+
+.convert-form{
+    border: 1px black !important;
+}
+
+.submit-button{
+    text-align: center !important;
 }

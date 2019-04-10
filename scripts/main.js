@@ -1,36 +1,42 @@
-var stock_prices_btn = function newFunction () {
-	return document.getElementById('.stock-prices-btn');
+var currenry_prices_btn = function newFunction () {
+	return document.getElementById('.currenry-prices');
+}
+
+var testVar = {
+	eur: 1,
+	usd: 1.3
 }
 
 
-var stockDataRequest = new XMLHttpRequest();
-stockDataRequest.open('GET', 'https://www.alphavantage.co/query?function=TIME_SERIES_WEEKLY&outputsize=compact&symbol=MSFT&apikey=5MB3SANDM9OTDRY0');
-stockDataRequest.onload = function () {
-	stock_prices = JSON.parse(stockDataRequest.responseText);
-	console.log(stock_prices);
+
+var curData = new XMLHttpRequest();
+curData.open('GET', 'http://data.fixer.io/api/latest?access_key=a754c07aba547f864f841764e00a058c');
+curData.onload = function () {
+	currenry_prices = JSON.parse(curData.responseText);
+	console.log(currenry_prices);
 };
-stockDataRequest.send();
+curData.send();
 
-stock_prices_btn.onclick = function () {
+currenry_prices_btn.onclick = function () {
 
-			stock_prices = document.createElement('tbody');
+			currenry_prices = document.createElement('tbody');
 
-			stock_prices.forEach(function(stock_prices) {
+			currenry_prices.forEach(function(data) {
 
 				let data_tr = document.createElement('tr'); // cteates <tr></tr>
 
-				for (value in stock_prices) {
+				for (value in currenry_prices) {
 					let data_td = document.createElement('td'); // creates <td></td>
 					let text = document.createTextNode(data[value]); // creates text for the object value
 					data_td.appendChild(text); // adds the text to the <td>
 					data_tr.appendChild(data_td); // adds the <td> to the <tr>
 				}
 
-				stock_prices.appendChild(data_tr); // adds <tr> to <tbody>
+				currenry_prices.appendChild(data_tr); // adds <tr> to <tbody>
 
 			});
 
-			stock_prices.appendChild(data_body); // pushes <tbody> to the DOM inside table
+			currenry_prices.appendChild(data_body); // pushes <tbody> to the DOM inside table
 
 	};
 	

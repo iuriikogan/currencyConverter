@@ -16,14 +16,14 @@
 			<li class="breadcrumb-item active" aria-current="page">Home</li>
 		</ol>
 	</nav>
-	
+
 	<nav aria-label="breadcrumb" style="display:none;">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="#">Home</a></li>
 			<li class="breadcrumb-item active" aria-current="page">Example Templates</li>
 		</ol>
 	</nav>
-	
+
 	<nav aria-label="breadcrumb" style="display:none;">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item"><a href="#">Home</a></li>
@@ -36,33 +36,66 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col">
-					<a href="http://bandu.io" id="logo"><img src="/assets/images/Bandu-logo.jpg" alt="Bandu Logo" style="height:450px; ; width: 100%; padding-bottom: 5px; padding-top: 5px;"></a>
+					<a href="http://bandu.io" id="logo"><img src="/assets/images/Bandu-logo.jpg" alt="Bandu Logo"
+							style="height:520px; ; width: 100%; padding-bottom: 5px; padding-top: 5px;"></a>
 				</div>
 			</div>
-		</div>		
-	</div>		
-
-	<div class="container">
-		<div class="container" id="convert-btn" style="text-align: center;">
-			<button id="stock-prices-btn">Sign Up for Live Updates</button>
 		</div>
 	</div>
 
+	<div class="container">
+		<div class="container" id="convert-btn" style="text-align: center;">
+			<button class='btn btn-primary mb-2' id="sign-up-btn">Sign Up for Live Updates</button>
+		</div>
+	</div>
 
+	<div class="container" id="convert-form">
+		<form class="form-inline">
+			<label class="sr-only" for="inlineFormcurrency1"></label>
+			<select class="form-control form-control-sm">
+				<option>Currency</option>
+			  </select>
+
+			<label class="sr-only" for="inlineFormInputCurrency2"></label>
+			<div class="input-group mb-2 mr-sm-2">
+				<div class="input-group-prepend">
+			<div class="input-group-text"></div>
+		  </div>
+			
+		  <select class="form-control form-control-sm">
+			<option>Convert to</option>
+		  </select>
+			</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+			<div class="form-check mb-2 mr-sm-2">
+			</div>
+	</div>
+
+	<button type="submit" class="btn btn-primary mb-2" id="submit-btn">Submit</button>
+
+	<hr>
 	<div class="class container-fluid">
 		<div class="class container">
-			<table class="stock-prices">
+			<table class="currency-prices">
 				<tbody></tbody>
 			</table>
 		</div>
 	</div>
 
 	<div class="class container-fluid">
-	
+
 	</div>
 
 
-	<script  src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 	<script src="/scripts/main.js"></script>
 </body>
