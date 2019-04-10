@@ -18,5 +18,15 @@ body{
     text-align: center !important;
 }
 .convert-form {
-    border: 1px solid black;
+    border: 1px solid black !important;
+}
+.submit-button {
+    
+}
+
+.header-img {
+    position: absolute !important ;
+    top: 0 !important;
+    width: 100% !important;
+    height: 25% !important;
 }

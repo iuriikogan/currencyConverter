@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="Author" content="Iurii Kogan - Tortuga Coders">
     <title>Currency Converter</title>
-    
+
     <link href="/styles/style.css" rel="stylesheet">
     <link href="/styles/bootstrap.css" rel="stylesheet">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-	<script src="/scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="/scripts/main.js"></script>
 </head>
 
 <body>
@@ -39,10 +39,15 @@
     <br>
     <div class="header-elem">
         <div class="container-fluid">
-            <div class="row">
+             <div class="row">
                 <div class="col">
-                    <a href="http://bandu.io" id="logo"><img src="/assets/images/Bandu-logo.jpg" alt="Bandu Logo"
-                            style="height:520px; ; width: 100%; padding-bottom: 5px; padding-top: 5px;"></a>
+                     <a href="http://bandu.io" id="logo"><img src="/assets/images/Bandu-logo.jpg" alt="Bandu Logo" style="height: 150px; width: 300px; padding-bottom: 5px; padding-top: 5px;"></a>
+                </div>
+            </div>
+           
+                <div class="col-md">
+                    <a href="http://bandu.io" id="logo"><img src="/assets/images/header.jpg" alt="Bandu Logo"
+                            style="height:520px; ; width: 100%;top:0 !important; padding-bottom: 5px; padding-top: 5px;"></a>
                 </div>
             </div>
         </div>
@@ -53,51 +58,51 @@
             <button class='btn btn-primary mb-2' id="sign-up-btn">Sign Up for Live Updates</button>
         </div>
     </div>
-<div class="row">
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>s
+    <div class="row">
+        <div class="col-md">
+            <select class="form-control form-control-sm">
+                <option>
+                    <script>
+                        currency_prices
+                    </script>
+                </option>
+            </select>
+        </div>
         <div class="col">
-             <div class="container" id="convert-form">
-                <form class="form-inline">
-                    <label class="sr-only" for="inlineFormcurrency1"></label>
-                        <select class="form-control form-control-sm">
-                            <option>Currency</option>
-                        </select>
-                <div class="col">
+            <div class="container" id="convert-form">
+                <!-- <form class="form-inline"> -->
+                <label class="sr-only" for="inlineFormcurrency1"></label>
+                <select class="form-control form-control-sm">
+                    <option>#TestVar</option>
+                </select>
+                <div class="col-1">
                     <label class="sr-only" for="inlineFormInputCurrency2"></label>
-                <div class="input-group mb-2 mr-sm-2">
-                    <div class="input-group-prepend">
-                        <div class="input-group-text">     
+                    <div class="input-group mb-2 mr-sm-2">
+                        <div class="input-group-prepend">
+
+                        </div>
                     </div>
                 </div>
+                <div class="row-md">
+                    <button onclick="convertRates()" class="btn btn-primary mb-2" id="submit-btn">Submit</button>
+                </div>
             </div>
-            <div class="row">
-                <div class="col">
-                <select class="form-control form-control-sm">
-                    <option>Convert to</option>
-                </select>
-            </div>
-        </div>            
-    <div>
-</div>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <div class="form-check mb-2 mr-sm-2">
-            </div>
+        </div>
+    </div>
     </div>
 
-    <button onclick="DoSomething()" class="btn btn-primary mb-2" id="submit-btn">Submit</button>
+
 
     <hr>
     <div class="class container-fluid">
         <div class="class container">
             <table class="currency-prices">
-                <tbody></tbody> 
+                <tbody></tbody>
             </table>
         </div>
     </div>

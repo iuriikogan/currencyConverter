@@ -4,11 +4,11 @@
 
 var testVar = {
     eur: 1,
-    usd: 1.3
+    usd: 1.3s
 }
 
 var currency_prices;
-var currency_prices_btn = document.getElementById('.currency-prices-btn'    );
+var currency_prices_btn = document.getElementById('.currency-prices-btn');
 
 var curData = new XMLHttpRequest();
 curData.open('GET', 'http://data.fixer.io/api/latest?access_key=a754c07aba547f864f841764e00a058c');
@@ -18,10 +18,10 @@ curData.onload = function () {
 };
 curData.send();
 
-function DoSomething() {
+function convertRates() {
     if (!this.currency_prices) {return;}
 
-    console.log('RUB: ' + this.currency_prices.rates['RUB']);
+    console.log('USD: ' + this.currency_prices.rates['USD']);
 }
 
 
