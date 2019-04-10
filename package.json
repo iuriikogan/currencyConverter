@@ -12,18 +12,18 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "git+https://github.com/twbs/bootstrap.git#v4.0.0-alpha",
-    "jquery": "^2.1.4"
+    "jquery": "^3.3.1"
   },
   "devDependencies": {
-    "babel-core": "^5.8.23",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.16.0",
-    "extract-text-webpack-plugin": "^0.8.2",
-    "node-sass": "^3.3.2",
-    "sass-loader": "^2.0.1",
-    "standard": "^5.1.1",
-    "style-loader": "^0.12.3",
-    "webpack": "^1.12.0",
-    "webpack-dev-server": "^1.10.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "standard": "^12.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.6",
+    "webpack-dev-server": "^3.3.1"
   }
 }
