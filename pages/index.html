@@ -11,19 +11,40 @@
 </head>
 
 <body>
-		<div class="col-1">
-				<img class="img-fluid" id="bandu-logo" src="/assets/images/Bandu-logo.jpg" alt="Bandu logo">
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item active" aria-current="page">Home</li>
+		</ol>
+	</nav>
+	
+	<nav aria-label="breadcrumb" style="display:none;">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Example Templates</li>
+		</ol>
+	</nav>
+	
+	<nav aria-label="breadcrumb" style="display:none;">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item"><a href="#">Home</a></li>
+			<li class="breadcrumb-item"><a href="#">Templates</a></li>
+			<li class="breadcrumb-item active" aria-current="page">Contact Us!</li>
+		</ol>
+	</nav>
+	<br>
+	<div class="header-elem">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col">
+					<a href="http://bandu.io" id="logo"><img src="/assets/images/Bandu-logo.jpg" alt="Bandu Logo" style="height:450px; ; width: 100%; padding-bottom: 5px; padding-top: 5px;"></a>
+				</div>
 			</div>
-
-		<div class="containter">
-			<form>
-				 <input> EUR => USD Selector 		<!--just for reference -->
-			</form> 
 		</div>		
+	</div>		
 
-	<div class="container-fluid">
-		<div class="container">
-			<button id="stock-prices-btn">Convert</button>
+	<div class="container">
+		<div class="container" id="convert-btn" style="text-align: center;">
+			<button id="stock-prices-btn">Sign Up for Live Updates</button>
 		</div>
 	</div>
 
