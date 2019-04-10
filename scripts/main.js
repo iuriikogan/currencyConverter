@@ -25,10 +25,10 @@ function convertRates() {
 }
 
 
-var currency_prices = document.createElement("select");
+var currency_prices = document.createElement("option");
 for (var value in currency_prices.rates) {
   var result = (currency_prices.base.value / currency_prices.rates[value]);
-  _select.options[_select.options.length] = new Option(currency_prices.value);
+  _options[options.length] = new Option(currency_prices.value);
 }
 
 document.body.appendChild(select); 
