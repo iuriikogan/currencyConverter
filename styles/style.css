@@ -19,6 +19,7 @@ body{
 }
 .convert-form {
     border: 1px solid black !important;
+    margin-left: 10px !important;
 }
 
 .header-img {
