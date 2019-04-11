@@ -1,4 +1,4 @@
-'use strict'
+
 
 var testVar = {
     eur: 1,
@@ -19,7 +19,7 @@ curData.send();
 function convertRates() {
     if (!this.currency_prices) {return;}
 
-    console.log('USD: ' + this.currency_prices.rates[USD]);
+    console.log('USD: ' + this.currency_prices.rates['USD']);
 }
 
 
@@ -31,6 +31,7 @@ for (var value in currency_prices.rates) {
 
 document.body.appendChild(select); 
  
+
 currency_prices_btn.onclick = function () {
 
     currency_prices = document.createElement('tbody');
@@ -46,10 +47,10 @@ currency_prices_btn.onclick = function () {
             data_tr.appendChild(data_td); // adds the <td> to the <tr>
         }
 
-        currency_prices.appendChild(data_tr); // adds <tr> to <tbody>
+        value.appendChild(data_tr); // adds <tr> to <tbody>
 
     });
 
-    currency_prices.appendChild(data_body); // pushes <tbody> to the DOM inside table
+    value.appendChild(data_body); // pushes <tbody> to the DOM inside table
 
 };
