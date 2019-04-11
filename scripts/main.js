@@ -17,8 +17,8 @@ curData.onload = function () {
 curData.send();
 
 function convertRates() {
-    if (!this.currency_prices) {return;}
-    console.log('USD: ' + this.currency_prices.rates['USD']);
+    if (!currency_prices) {return;}
+    console.log('USD: ' + currency_prices.rates.usd);
 }
 
 
