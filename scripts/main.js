@@ -1,4 +1,4 @@
-
+'use strict'
 
 var testVar = {
     eur: 1,
@@ -23,13 +23,19 @@ function convertRates() {
 }
 
 
-var currency_prices = document.createElement("option");
-for (var value in currency_prices.rates) {
-  var result = (currency_prices.base.value / currency_prices.rates[value]);
-  _options[options.length] = new Option(currency_prices.value);
-}
+var currency_selector = document.getElementById("#currency-selector");
 
-document.body.appendChild(select); 
+currency_selector.on('click', function () {
+    let options = '';
+    for (value in currency_prices) {
+        console.log('value', value)
+        // value EUR, GBP 
+        let option = `<option value="${value}">${value}</option>`
+        options += option
+    }
+    currency_selector.appendChild(options);
+})
+
  
 
 currency_prices_btn.onclick = function () {
@@ -38,19 +44,19 @@ currency_prices_btn.onclick = function () {
 
     currency_prices.forEach(function (data) {
 
-        let data_tr = document.createElement('tr'); // cteates <tr></tr>
+        let data_tr = document.createElement('tr'); 
 
         for (value in currency_prices) {
-            let data_td = document.createElement('td'); // creates <td></td>
-            let text = document.createTextNode(data[value]); // creates text for the object value
-            data_td.appendChild(text); // adds the text to the <td>
-            data_tr.appendChild(data_td); // adds the <td> to the <tr>
+            let data_td = document.createElement('td'); 
+            let text = document.createTextNode(data[value]); 
+            data_td.appendChild(text);
+            data_tr.appendChild(data_td);
         }
 
-        value.appendChild(data_tr); // adds <tr> to <tbody>
+        value.appendChild(data_tr); 
 
     });
 
-    value.appendChild(data_body); // pushes <tbody> to the DOM inside table
+    value.appendChild(data_body); 
 
 };
