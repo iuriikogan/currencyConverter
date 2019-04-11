@@ -18,7 +18,6 @@ curData.send();
 
 function convertRates() {
     if (!this.currency_prices) {return;}
-
     console.log('USD: ' + this.currency_prices.rates['USD']);
 }
 
@@ -27,7 +26,7 @@ var currency_selector = document.getElementById("#currency-selector");
 
 currency_selector.on('click', function () {
     let options = '';
-    for (value in currency_prices) {
+    for (value in currency_prices.rates) {
         console.log('value', value)
         // value EUR, GBP 
         let option = `<option value="${value}">${value}</option>`
